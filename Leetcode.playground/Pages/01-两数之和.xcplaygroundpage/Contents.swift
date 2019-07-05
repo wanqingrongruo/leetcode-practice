@@ -25,6 +25,11 @@ var str = "Hello, playground"
 
 class Solution {
 
+    /* 思路:
+     * 时间上必然要在 O(n) 的基础上
+     * 关键是数据的保存和差值的查找 - hash
+    */
+
     // 1.
     // Time Complexity: O(n), Space Complexity: O(n)
     /*
@@ -92,7 +97,7 @@ class Solution {
         return []
     }
 
-    // jj
+    // 本质与 1 差不多, 只是看一下 循环的效率问题
     func twoSum05(_ nums: [Int], _ target: Int) -> [Int] {
         var dict = [Int: Int]()
         var i = -1
@@ -114,3 +119,6 @@ let results = Solution().twoSum(nums, 9)
 let results03 = Solution().twoSum03(nums, 9)
 let results04 = Solution().twoSum04(nums, 9)
 let results05 = Solution().twoSum05(nums, 9)
+
+
+//: [Next](@next)
