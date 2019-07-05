@@ -32,6 +32,13 @@ public class ListNode {
 }
 
 class Solution {
+
+    /* 思路:
+     * 遍历节点
+     * 链表的处理, 通过新建头结点
+     * 进位
+     */
+
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         let result = ListNode(0)
 
@@ -41,11 +48,11 @@ class Solution {
         var tmpList = result
 
         while leftNode != nil || rightNode != nil {
+
             let sum = (leftNode?.val ?? 0) + (rightNode?.val ?? 0 ) + advanceValue
-            let val = sum % 10
             advanceValue = sum / 10
 
-            tmpList.next = ListNode(val)
+            tmpList.next = ListNode(sum % 10)
             tmpList = tmpList.next!
 
             leftNode = leftNode?.next
