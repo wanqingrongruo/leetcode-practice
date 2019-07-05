@@ -3,6 +3,7 @@
     <pages>
         <page name='01-两数之和'/>
         <page name='02-两数相加'/>
-        <page name='03'/>
+        <page name='03-无重复字符的最长子串'/>
+        <page name='04-寻找两个有序数组 的中位数'/>
     </pages>
 </playground>
